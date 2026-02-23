@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunner Portfolio</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+nav{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+header{
+    background:linear-gradient(to right,#667eea,#764ba2);
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+    margin-top:50px;
+}
+
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.skills{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#f2f2f2;
+    padding:20px;
+    width:250px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:10px;
+    background:#111;
+    color:white;
+    cursor:pointer;
+}
+
+footer{
+    background:#111;
+    color:white;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    .card{
+        width:90%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#home">หน้าแรก</a>
+<a href="#about">เกี่ยวกับ</a>
+<a href="#skills">ทักษะ</a>
+<a href="#contact">ติดต่อ</a>
+</nav>
+
+<header id="home">
+<h1 id="title">สวัสดี ผมชื่อ Gunner 🚀</h1>
+<p>อายุ 16 กำลังฝึกเป็น Web Developer</p>
+<button onclick="changeText()">ดูพลังของผม</button>
+</header>
+
+<section id="about">
+<h2>เกี่ยวกับผม</h2>
+<p>
+ผมกำลังเรียน HTML, CSS และ JavaScript  
+เป้าหมายคือเป็นโปรแกรมเมอร์ระดับมืออาชีพ 💻🔥
+</p>
+</section>
+
+<section id="skills">
+<h2>ทักษะ</h2>
+<div class="skills">
+<div class="card">
+<h3>HTML</h3>
+<p>สร้างโครงสร้างเว็บไซต์</p>
+</div>
+
+<div class="card">
+<h3>CSS</h3>
+<p>ออกแบบเว็บให้สวยและทันสมัย</p>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3>
+<p>ทำให้เว็บโต้ตอบได้</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>ติดต่อ</h2>
+<p>Email: gunner@email.com</p>
+<button onclick="showDate()">ดูวันเวลาปัจจุบัน</button>
+<p id="date"></p>
+</section>
+
+<footer>
+© 2026 Gunner Portfolio
+</footer>
+
+<script>
+function changeText(){
+document.getElementById("title").innerHTML=
+"Gunner กำลังพัฒนาเป็น Web Developer ตัวจริง 🔥";
+}
+
+function showDate(){
+let today=new Date();
+document.getElementById("date").innerHTML=
+today.toLocaleString("th-TH");
+}
+</script>
+
+</body>
+</html>
