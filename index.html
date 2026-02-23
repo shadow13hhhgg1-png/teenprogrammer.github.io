@@ -3,22 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gunner Portfolio</title>
+<title>Gunner | Web Developer</title>
 
 <style>
 body{
     margin:0;
     font-family:Arial, sans-serif;
+    background:#0f0f0f;
+    color:white;
     scroll-behavior:smooth;
 }
 
+/* NAV */
 nav{
-    background:#111;
+    background:#000;
     padding:15px;
     text-align:center;
     position:fixed;
     width:100%;
     top:0;
+    z-index:1000;
 }
 
 nav a{
@@ -26,21 +30,51 @@ nav a{
     text-decoration:none;
     margin:15px;
     font-weight:bold;
+    transition:0.3s;
 }
 
+nav a:hover{
+    color:#00f2fe;
+}
+
+/* HEADER */
 header{
-    background:linear-gradient(to right,#667eea,#764ba2);
-    color:white;
     text-align:center;
-    padding:120px 20px;
-    margin-top:50px;
+    padding:140px 20px 100px;
 }
 
+.profile{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #00f2fe;
+    margin-bottom:20px;
+}
+
+button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#00f2fe;
+    color:black;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#667eea;
+    color:white;
+}
+
+/* SECTION */
 section{
     padding:80px 20px;
     text-align:center;
 }
 
+/* SKILLS */
 .skills{
     display:flex;
     justify-content:center;
@@ -49,28 +83,139 @@ section{
 }
 
 .card{
-    background:#f2f2f2;
+    background:#1a1a1a;
+    padding:25px;
+    width:260px;
+    border-radius:20px;
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:#222;
+}
+
+/* Footer */
+footer{
+    background:black;
     padding:20px;
-    width:250px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .card{
+        width:90%;
+    }
+}
+</style>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gunner | Web Developer</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f0f0f;
+    color:white;
+    scroll-behavior:smooth;
+}
+
+/* NAV */
+nav{
+    background:#000;
+    padding:15px;
+    text-align:center;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00f2fe;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:140px 20px 100px;
+}
+
+.profile{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #00f2fe;
+    margin-bottom:20px;
 }
 
 button{
     padding:10px 20px;
     border:none;
-    border-radius:10px;
-    background:#111;
-    color:white;
+    border-radius:20px;
+    background:#00f2fe;
+    color:black;
     cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
 }
 
-footer{
-    background:#111;
+button:hover{
+    background:#667eea;
     color:white;
+}
+
+/* SECTION */
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:#1a1a1a;
+    padding:25px;
+    width:260px;
+    border-radius:20px;
+    transition:0.4s;
+    opacity:0;
+    transform:translateY(40px);
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:#222;
+}
+
+/* Footer */
+footer{
+    background:black;
     padding:20px;
 }
 
+/* Responsive */
 @media(max-width:768px){
     .card{
         width:90%;
@@ -89,54 +234,44 @@ footer{
 </nav>
 
 <header id="home">
-<h1 id="title">สวัสดี ผมชื่อ Gunner 🚀</h1>
-<p>อายุ 16 กำลังฝึกเป็น Web Developer</p>
+<img src="profile.jpg" class="profile">
+<h1 id="title">Gunner 🚀</h1>
+<p>วัย 16 | Future Web Developer</p>
 <button onclick="changeText()">ดูพลังของผม</button>
 </header>
 
 <section id="about">
 <h2>เกี่ยวกับผม</h2>
 <p>
-ผมกำลังเรียน HTML, CSS และ JavaScript  
-เป้าหมายคือเป็นโปรแกรมเมอร์ระดับมืออาชีพ 💻🔥
+ผมกำลังฝึก HTML, CSS และ JavaScript  
+เป้าหมายคือเป็น Full-Stack Developer ในอนาคต 🔥
 </p>
 </section>
 
 <section id="skills">
-<h2>ทักษะ</h2>
+<h2>ทักษะของผม</h2>
 <div class="skills">
-<div class="card">
-<h3>HTML</h3>
-<p>สร้างโครงสร้างเว็บไซต์</p>
-</div>
-
-<div class="card">
-<h3>CSS</h3>
-<p>ออกแบบเว็บให้สวยและทันสมัย</p>
-</div>
-
-<div class="card">
-<h3>JavaScript</h3>
-<p>ทำให้เว็บโต้ตอบได้</p>
-</div>
+<div class="card">HTML — โครงสร้างเว็บ</div>
+<div class="card">CSS — ออกแบบให้สวย</div>
+<div class="card">JavaScript — ทำให้เว็บมีชีวิต</div>
 </div>
 </section>
 
 <section id="contact">
 <h2>ติดต่อ</h2>
 <p>Email: gunner@email.com</p>
-<button onclick="showDate()">ดูวันเวลาปัจจุบัน</button>
+<button onclick="showDate()">ดูวันเวลา</button>
 <p id="date"></p>
 </section>
 
 <footer>
-© 2026 Gunner Portfolio
+© 2026 Gunner | Built with Passion 💻
 </footer>
 
 <script>
 function changeText(){
 document.getElementById("title").innerHTML=
-"Gunner กำลังพัฒนาเป็น Web Developer ตัวจริง 🔥";
+"Gunner กำลังจะกลายเป็น Developer ตัวจริง 🔥";
 }
 
 function showDate(){
@@ -144,6 +279,20 @@ let today=new Date();
 document.getElementById("date").innerHTML=
 today.toLocaleString("th-TH");
 }
+
+/* Animation ตอนเลื่อน */
+window.addEventListener("scroll", function(){
+let cards=document.querySelectorAll(".card");
+cards.forEach(function(card){
+let position=card.getBoundingClientRect().top;
+let screenHeight=window.innerHeight;
+
+if(position < screenHeight - 100){
+card.style.opacity="1";
+card.style.transform="translateY(0)";
+}
+});
+});
 </script>
 
 </body>
